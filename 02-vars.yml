@@ -3,12 +3,12 @@
   vars: 
      URL : play google.com
   tasks: 
-       - name: Printing YRL
+       - name: Printing URL
          ansible.builtin.debug:
-         msg: Url that we print is {{ URL }} 
+           msg: Url that we print is {{ URL }} 
 
        - name: Printing URL with quotes
          ansible.builtin.debug:
-         msg: Url = {{ URL }} 
+           msg: Url = {{ URL }} 
 
          
