@@ -1,9 +1,8 @@
-- nmae: demo on variables
+- name: demo on variables
   hosts: all 
   vars: 
      URL : play google.com
-
-   tasks: 
+  tasks: 
        - name: Printing url
          ansible.builtin.debug:
          msg: Url that we print is {{ URL }} 
