@@ -1,0 +1,15 @@
+- nmae: demo on variables
+  hosts: all 
+  vars: 
+     URL : play google.com
+
+   tasks: 
+       - name: Printing url
+         ansible.builtin.debug:
+         msg: Url that we print is {{ URL }} 
+
+       - name: Printing url with quotes
+         ansible.builtin.debug:
+         msg: Url = {{ URL }} 
+
+         
