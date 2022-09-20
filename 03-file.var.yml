@@ -13,4 +13,9 @@
          ansible.builtin.debug:
            msg: "{{ URL }}" 
          vars: 
-            URL: task.google.com
+            URL: task.google.com 
+
+       - name: URL for this env is
+         ansible.builtin.debug:
+           msg: "{{ ENV }}" 
+    
