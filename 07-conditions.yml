@@ -1,0 +1,12 @@
+- name: demo on conditions 
+  hosts: all 
+  tasks: 
+    - name: Run this when the OS is CentOS 
+      ansible.builtin.debug: 
+          msg: Hello to centos  
+      when: ansible_distribution == "CentOS"
+
+    - name: Run this when the OS is Ubuntu 
+      ansible.builtin.debug: 
+          msg: Hello to ubuntu  
+      when: ansible_distribution == "Ubuntu"
