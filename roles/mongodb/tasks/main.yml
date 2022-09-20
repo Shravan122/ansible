@@ -29,10 +29,19 @@
 
 - name: Loading Catalogue Schema 
   community.mongodb.mongodb_shell:
-     file: "/tmp/mongodb-main/catalogue.js"
-     idempotent: yes
+    file: "/tmp/mongodb-main/{{item}}.js"
+    idempotent: yes 
+  loop: 
+      - catalogue
+      - users  
 
-- name: Loading Users Schema 
-  community.mongodb.mongodb_shell:
-     file: "/tmp/mongodb-main/users.js"
-     idempotent: yes        
+      
+    # - name: Loading Catalogue Schema 
+    # community.mongodb.mongodb_shell:
+    # file: "/tmp/mongodb-main/catalogue.js"
+    #idempotent: yes
+
+    # - name: Loading Users Schema 
+    # community.mongodb.mongodb_shell:
+    # file: "/tmp/mongodb-main/users.js"
+    #idempotent: yes        
