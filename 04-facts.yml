@@ -3,4 +3,9 @@
   tasks:
     - name: printing  URL
       ansible.builtin.debug:
-        msg: OS Distro is {{ansible_distribution}} 
+        msg: OS Distro is {{ansible_distribution}}  
+
+
+    - name: printing  mac address
+      ansible.builtin.debug:
+        msg: ansible mac address is {{ansible_default_ipv4.macadress}}        
