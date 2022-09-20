@@ -6,6 +6,6 @@
         msg: OS Distro is {{ansible_distribution}}  
 
 
-    - name: printing  Mac address
+    - name: printing  Mac Address
       ansible.builtin.debug:
-        msg: ansible Mac address is {{macaddress}}        
+        msg: ansible Mac Address is {{macaddress}}        
