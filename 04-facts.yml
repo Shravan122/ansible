@@ -1,0 +1,6 @@
+- name: demo on facts
+  hosts: all
+  tasks:
+    - name: printing  URL
+      ansible.builtin.debug:
+        msg: OS Distro is {{ansible_distribution}} 
