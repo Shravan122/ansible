@@ -7,4 +7,8 @@
     
     - name: printing out variable 
       debug: 
-        msg: "{{OUT.stdout}}"
+        msg: "{{OUT.stdout}}" 
+
+    - name: printing the uptime status 
+      ansible.builtin.debug: 
+        msg: status of uptime is {{OUT.rc}}    
