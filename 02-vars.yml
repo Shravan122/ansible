@@ -1,7 +1,10 @@
 - name: demo on variables
   hosts: all 
   vars: 
-     URL : play google.com
+     URL : play google.com 
+  vars_prompt:
+      - name: URL 
+        prompt: Enter URL
   tasks: 
        - name: Printing URL
          ansible.builtin.debug:
@@ -12,6 +15,6 @@
            msg: "{{ URL }}" 
          vars: 
             URL: task.google.com
-            
+
 
          
