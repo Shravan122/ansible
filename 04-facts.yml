@@ -13,3 +13,7 @@
     - name: printing Python version
       ansible.builtin.debug:
         msg: ansible Python version is {{ansible_python_version}}          
+
+    - name: printing Domain
+      ansible.builtin.debug:
+        msg: ansible Domin is {{ansible_domain}}               
