@@ -1,4 +1,4 @@
-- name: demo on conditions 
+- name: demo on copy 
   hosts: all 
   tasks:
       - name: Copy file 
