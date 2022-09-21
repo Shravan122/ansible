@@ -3,10 +3,10 @@
 
 - name: Installing NodeJS
   ansible.builtin.package:
-    name: "{{item}}"
+    name:  "{{item}}"
     state: present   
     loop: 
-       - NodeJS
+       - nodejs
        - gcc -c++
 
 - name: Creating application user
