@@ -7,7 +7,7 @@
     state: present   
     loop: 
        - nodejs
-       - gcc -c++
+       - gcc-c++ 
 
 - name: Creating application user
   ansible.builtin.user:
