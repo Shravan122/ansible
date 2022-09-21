@@ -1,7 +1,7 @@
 - name: Configure the Yum th Yum repos 
   ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash 
 
-- name: Installing NodeJS
+- name: Install NodeJS
   ansible.builtin.package:
     name:  "{{item}}"
     state: present   
