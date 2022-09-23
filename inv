@@ -14,4 +14,7 @@ redis.roboshop.internal
 user.roboshop.internal 
 
 [cart]
-cart.roboshop.internal
+cart.roboshop.internal 
+
+[mysql]
+mysql.roboshop.internal
