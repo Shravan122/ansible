@@ -38,4 +38,4 @@
 - name: Configuing the {{COMPONENT}} svc
   ansible.builtin.include_role:
     name: common 
-    tasks_from: start-svc    
+    tasks_from: systemd.service   
