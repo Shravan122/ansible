@@ -6,7 +6,7 @@
 - name: Creating application user
   ansible.builtin.include_role:
     name: common
-    tasks_from: creat-user   
+    tasks_from: create-user   
 
 - name: Download and Extract {{COMPONENT}}
   ansible.builtin.include_role:
