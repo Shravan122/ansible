@@ -10,8 +10,7 @@
    # enabled: yes
    # daemon_reload: yes  
 
-- name: Configuing the {{COMPONENT}} svc
+- name: Configuring the {{COMPONENT}} svc
   ansible.builtin.include_role:
     name: common 
     tasks_from: start-svc 
-       
