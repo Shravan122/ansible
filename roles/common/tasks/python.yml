@@ -13,14 +13,13 @@
     name: common 
     tasks_from: create-user 
 
-- name:  Download and extract {{COMPONENT}}
+- name: Download and Extract {{COMPONENT}}
   ansible.builtin.include_role:
     name: common 
-    tasks_from: download-and-extract  
+    tasks_from: Download and extract  
 
 - name: Installing {{COMPONNET}} Dependencies 
   ansible.builtin.pip: 
      requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
      executable: pip3   
-     
-            
+
