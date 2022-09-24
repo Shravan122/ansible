@@ -1,4 +1,4 @@
 - name: Maven Configuration 
   ansible.builtin.include_role:
-    name: common 
-    tasks_from: maven 
+    name: common
+    tasks_from: maven
