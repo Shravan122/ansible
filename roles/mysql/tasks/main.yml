@@ -12,4 +12,11 @@
   ansible.builtin.service:
     name:  mysqld
     state: started
-    enabled: yes      
+    enabled: yes   
+
+
+- name: Check the {{COMPONENT}} password by fetching from the logs 
+  community.mysql.mysql_info:
+    login_user: root
+    login_password: RoboShop@1
+           
