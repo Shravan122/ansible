@@ -27,4 +27,5 @@
  # This will only be executed only if the above is a failure
 - name: Reset Password
   debug:
-    msg: "{{mysql_stat}}" 
+    msg: "{{mysql_stat}}"  
+  when: mysql_stat.failed   
