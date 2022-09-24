@@ -30,15 +30,13 @@
       - name: Fetching  Password
         ansible.builtin.shell: grep "temporary" /var/log/mysqld.log | head -n 1 | awk -F " " '{print $NF}'
         register: DEFAULT_ROOT_PASSWORD
-        when: mysql_stat.failed   
-
+           
       - name: Copy the SQL Password Command file 
         ansible.builtin.copy: 
-        src: root-password.sql 
-        dest: /tmp/root-password.sql
-        when: mysql_stat.failed   
-
+          src: root-password.sql 
+          dest: /tmp/root-password.sql
+           
       - name: Changing  Password
         ansible.builtin.shell: mysql --connect-expired-password  -uroot -p"{{DEFAULT_ROOT_PASSWORD.stdout}}" < /tmp/root-password.sql 
-        register: DEFAULT_ROOT_PASSWORD
-        when: mysql_stat.failed     
+        
+             
