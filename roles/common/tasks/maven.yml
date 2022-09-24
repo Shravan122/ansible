@@ -11,7 +11,13 @@
 - name: Download and Extract {{COMPONENT}}
   ansible.builtin.include_role:
     name: common 
-    tasks_from: Download and extract   
+    tasks_from: Download and extract    
+
+- name: Generating Package 
+  ansible.builtin.shell: mvn clean package &&  mv target/shipping-1.0.jar shipping.jar 
+  become_user: "{{APPUSER}}"
+  args:
+    chdir: /home/{{APPUSER}}/{{COMPONENT}}/    
 
 - name: Configuing the {{COMPONENT}} svc
   ansible.builtin.include_role:
