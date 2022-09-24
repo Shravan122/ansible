@@ -21,4 +21,10 @@
   community.mysql.mysql_info:
     login_user: root
     login_password: RoboShop@1
-           
+  ignore_errors: yes         
+  register: mysql_stat 
+
+ # This will only be executed only if the above is a failure
+- name: Reset Password
+  debug:
+    msg: "{{mysql_stat}}" 
