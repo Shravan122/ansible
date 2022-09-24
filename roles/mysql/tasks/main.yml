@@ -30,7 +30,7 @@
   register: DEFAULT_ROOT_PASSWORD
   when: mysql_stat.failed   
 
-- name: Copy thr SQL Password Command file 
+- name: Copy the SQL Password Command file 
   ansible.buitin.copy: 
     src: root-password.sql 
     dest: /tmp/root-password.sql
