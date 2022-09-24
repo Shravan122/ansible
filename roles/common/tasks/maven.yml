@@ -11,4 +11,9 @@
 - name: Download and Extract {{COMPONENT}}
   ansible.builtin.include_role:
     name: common 
-    tasks_from: Download and extract     
+    tasks_from: Download and extract   
+
+- name: Configuing the {{COMPONENT}} svc
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: systemd-service      
