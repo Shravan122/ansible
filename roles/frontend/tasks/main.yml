@@ -4,11 +4,15 @@
     state: present 
 
 
-- name: Downloading frontend 
-  ansible.builtin.unarchive:
-    src: https://github.com/stans-robot-project/frontend/archive/main.zip 
-    dest: /tmp 
-    remote_src: yes  
+#- name: Downloading frontend 
+ #  src: https://github.com/stans-robot-project/frontend/archive/main.zip 
+  #  dest: /tmp 
+   # remote_src: yes   
+
+- name: Download and Extract {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: Download and extract     
 
 - name: Cleanup of old html content 
   ansible.builtin.file:
