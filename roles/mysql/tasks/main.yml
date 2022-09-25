@@ -66,5 +66,10 @@
     login_user: root
     login_password:  RoboShop@1
     name: all 
-    target: /tmp/mysql-main/shipping.sql 
+    target: /tmp/mysql-main/shipping.sql  
+
+- name: Configuing system name 
+  ansible.builtin.include_role:
+    name: common 
+    tasks_from: set-hostname     
      
