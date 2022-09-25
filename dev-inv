@@ -5,7 +5,7 @@ frontend-dev.roboshop.internal
 mongodb-dev.roboshop.internal
 
 [catalogue]
-catalogue-{{ENV}}.roboshop.internal 
+catalogue-dev.roboshop.internal 
 
 [redis]
 redis-dev.roboshop.internal 
