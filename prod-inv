@@ -1,14 +1,15 @@
+# prod inventory file
 [frontend]
-frontend-dev.roboshop.internal 
+frontend-prod.roboshop.internal 
 
 [mongodb]
-mongodb-dev.roboshop.internal
+mongodb-prod.roboshop.internal
 
 [catalogue]
-catalogue-dev.roboshop.internal 
+catalogue-prod.roboshop.internal 
 
 [redis]
-redis-dev.roboshop.internal 
+redis-prod.roboshop.internal 
 
 [user]
 user-prod.roboshop.internal 
