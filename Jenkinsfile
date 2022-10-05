@@ -5,9 +5,9 @@ pipeline {
         SSH_CRED      = credentials('SSH')
     }
 
-    stages {  
-        stage('Perform Lint Checks') {    // Runs only when it's a feature branch 
-        when { branch pattern: "feature-.*", comparator: "REGEXP"} 
+    stages {   
+        stage('Perform Link Checks') {  
+           when { branch pattern: "feature-.*", comparator: "REGEXP"} 
             steps {
                 sh "env"
                 sh "echo Performing Link Checks"           
