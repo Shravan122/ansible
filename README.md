@@ -46,3 +46,21 @@ What is task ? A Task is an action or actions that you wish to do!
 # How do you run the playbooks ?
 
 # ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 01-sample.yml
+
+
+
+# For ansible pull to work you need to ensure that the machine which executes the pull        command has ANSIBLE Installed on the machine.
+
+# ansible-pull -U https://github.com/b50-clouddevops/ansible.git -e COMPONENT=frontend -e   ENV=dev roboshop-pull.yml
+# Ansible Tags
+ansible-playbook 13-tags.yml  --skip-tags  web
+ansible-playbook 13-tags.yml  -t web
+Test Commits for the ansible-pull
+Ansible pull needs ansible to installed and ensure version6 is the installed version
+
+# How to create an AMI with ANSIBLE ?
+1.Launch the machine with our lab image
+2.Install ansible with curl command and also install boto : $ sudo pip3 install boto
+3.Once Installed , make an AMI and ensure that comes to available state
+4.Going forward for all the machines that needs needs ansible use this AMI.
+5.Which will be having ANSIBLE installed on it.
