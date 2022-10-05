@@ -5,7 +5,7 @@ pipeline {
         SSH_CRED      = credentials('SSH')
     }
 
-     // stages { 
+      stages { 
         // stage('Perform Lint Checks') {    // Runs only when it's a feature branch 
         //when { branch pattern: "feature-.*", comparator: "REGEXP"} 
           //  steps {
@@ -22,3 +22,4 @@ pipeline {
             }
         } 
      } 
+}
