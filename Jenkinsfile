@@ -6,13 +6,13 @@ pipeline {
     }
 
     stages { 
-         stage('Perform Lint Checks') {    // Runs only when it's a feature branch 
-        when { branch pattern: "feature-.*", comparator: "REGEXP"} 
-            steps {
-                sh "env"
-                sh "echo Performing Link Checks"           
-            }
-        } 
+       //  stage('Perform Lint Checks') {    // Runs only when it's a feature branch 
+      //  when { branch pattern: "feature-.*", comparator: "REGEXP"} 
+          //  steps {
+             //   sh "env"
+              //  sh "echo Performing Link Checks"           
+          //  }
+     //   } 
         
         stage('Do a Dry-Run') {  
           //  when { branch pattern: "PR-.*", comparator: "REGEXP"}           // Runs only when it's a PR 
