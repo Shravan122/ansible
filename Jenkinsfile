@@ -5,12 +5,13 @@ pipeline {
         SSH_CRED      = credentials('SSH')
     }
 
-      stages { 
-         stage('Do a Dry-Run') {  // Do a Dryrun
+    stages {
+        stage('Do a Dry-Run') {  
+          //  when { branch pattern: "PR-.*", comparator: "REGEXP"}           // Runs only when it's a PR 
             steps {
                 sh "env"
-                sh "ansible-playbook robot-dryrun.yml -e COMPONENT=mongodb -e ENV=dev -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW}"        
+                sh "ansible-playbook robot-dryrun.yml -e COMPONENT=mongodb -e ENV=dev -e ansible_user=${SSH_CRED_USR} -e ansible_password=${SSH_CRED_PSW}"           
             }
         } 
-     } 
-}
+    } 
+}     
