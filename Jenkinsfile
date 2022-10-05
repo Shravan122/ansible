@@ -29,5 +29,13 @@ pipeline {
                 sh "echo I am running against the Main branch"
             }
         }
-    }
+          stage('TAG') {   
+            when { 
+                expression { env.TAG_NAME != null }        // Checking whether the value of TAG_NAME is null or not
+                }    
+            steps {
+                sh "echo I am running against a TAG"                
+            }
+        }
+    } 
 }
