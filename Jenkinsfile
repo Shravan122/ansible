@@ -7,14 +7,14 @@ pipeline {
 
      stages { 
          stage('Perform Lint Checks') {    // Runs only when it's a feature branch 
-        when { branch pattern: "feature-.*", comparator: "REGEXP"} 
+        when { branch pattern: "feature-.*", comparator: "REGEXP"}  // For feture branch
             steps {
                 sh "env"
                 sh "echo Performing Link Checks"           
             }
         } 
 
-         stage('Do a Dry-Run') {  
+         stage('Do a Dry-Run') {   // For Dry-run
            // when { branch pattern: "PR-.*", comparator: "REGEXP"}           // Runs only when it's a PR 
             steps {
                 sh "env"
