@@ -14,16 +14,16 @@
     name: common 
     tasks_from: Download and extract     
 
-- name: Cleanup of old html content 
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent   
+#- name: Cleanup of old html content 
+ # ansible.builtin.file:
+  #  path: /usr/share/nginx/html
+   # state: absent   
 
-- name: Coping frotend context to nginx path 
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/static/
-    dest: /usr/share/nginx/html
-    remote_src: yes   
+#- name: Coping frotend context to nginx path 
+ # ansible.builtin.copy:
+  #  src: /tmp/frontend-main/static/
+   # dest: /usr/share/nginx/html
+   # remote_src: yes   
 
 - name: Coping proxy config 
   ansible.builtin.template:
