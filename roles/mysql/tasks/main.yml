@@ -8,7 +8,11 @@
     name:  
        - mysql-community-server 
        -  MySQL-python
-    state: present  
+    state: installed 
+
+ # Added as Schema Load Needs PyMySQL
+- name: Installing PyMySQL
+  ansible.builtin.shell: pip3 install PyMySQL   
 
 - name: Starting {{COMPONENT}} Service 
   ansible.builtin.service:
